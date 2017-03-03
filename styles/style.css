@@ -1,0 +1,10 @@
+.row {
+  max-width: auto;
+  background-color: black;
+
+}
+
+.car {
+  height: 100px;
+  width: 50%;
+}
