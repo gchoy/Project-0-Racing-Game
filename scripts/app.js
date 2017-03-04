@@ -16,14 +16,14 @@ $(document).keyup(function(e) {
 function moveCar() {
     for (var direction in keys) {
 
-        if (direction == 32) {
-            $("#viper").animate({left: "-=5"}, 0);
+        if (direction == 68) {
+            $("#audi").animate({left: "+=5"}, 0);
         }
 
         if (direction == 39) {
             $("#viper").animate({left: "+=5"}, 0);
         }
-        
+
     }
 }
 });
