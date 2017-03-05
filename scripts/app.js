@@ -10,11 +10,12 @@ var countDown = function() {
     }
     var iv = setInterval(function() {
         display();
-        if (ct === 0) {
+        if (ct === -1) {
           clearInterval(iv);
-          $("#countdown").empty();
-          $("#countdown").css('color','green');
-          $("#countdown").append("GO!");
+          $elem.empty();
+          $elem.css('color','green');
+          $elem.append("GO!");
+          
         }
     }, 1000);
     display();
