@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-//Starts and stops start countdown
+//Starts and stops countdown
 var countDown = function() {
     var ct = 3;
     var $elem = $(this);
@@ -15,14 +15,14 @@ var countDown = function() {
           $elem.empty();
           $elem.css('color','green');
           $elem.append("GO!");
-          
+
         }
     }, 1000);
     display();
 };
 $("#countdown").each(countDown);
 
-//C
+//Setting a time interval to repeat moveCar function
 setInterval(moveCar, 20);
 var keys = {}
 
@@ -34,6 +34,7 @@ $(document).keyup(function(e) {
     delete keys[e.keyCode];
 });
 
+//moveCar function moves players and has win logic
 function moveCar() {
 
    function stopCar(){
@@ -54,18 +55,19 @@ function moveCar() {
         if ($('#redcar').offset().left >1080 && $('#redcar').offset().left>$('#bluecar').offset().left){
           console.log("Player 1 winner");
           stopCar();
-          $('body').append('<p id="p1">Player 1 Wins!<p>');
+          $('#countdown').append('<p id="p1">Player 1 Wins!<p>');
 
         } else if ($('#bluecar').offset().left >1080 && $('#bluecar').offset().left>$('#redcar').offset().left){
           console.log("Player 2 winner");
           stopCar();
-          $('body').append('<p id="p2">Player 2 Wins!<p>');
+          $('#countdown').append('<p id="p2">Player 2 Wins!<p>');
 
         }
 
     }
 }
 
+//Button restarts game
 $('button').click(function() {
     location.reload();
 });

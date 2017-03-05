@@ -1,66 +1,83 @@
+body{
+  background-color: black;
+}
+
 h1 {
   text-align: center;
   font-family: 'Bangers', cursive;
   font-size: 80px;
   font-weight: bold;
-
+  color: yellow;
 }
 
 #countdown {
   text-align: center;
   font-family: 'Bangers', cursive;
-  font-size: 90px;
+  font-size: 60px;
 
 }
+
 
 .car {
-  height: 100px;
-  width: 50%;
+  height: 40px;
+  width: 10%;
 
 }
 
-#str1 {
-  background-color: black;
-  width: 100%;
-  height: 30px;
-}
 
 
 #redcar {
   position: absolute;
-  top: 100px;
+  top: 300px;
   width: 100;
 }
 
 #bluecar {
   position: absolute;
-  top: 200px;
+  top: 400px;
   width: 100;
 
 }
 
 #p1 {
 
+  top: 100px;
   text-align: center;
+  top: 40px;
   font-family: 'Bangers', cursive;
-  font-size: 80px;
+  font-size: 70px;
   font-weight: bold;
   color: red;
+  z-index: 2;
+
 
 }
 
 #p2 {
-
+  top: 100px;
   text-align: center;
   font-family: 'Bangers', cursive;
   font-size: 80px;
   font-weight: bold;
   color: blue;
+  z-index: 2;
+
 }
+
+.container {
+
+  height: 500px;
+  width: auto;
+  border-style: solid;
+  background-color: black;
+  z-index: -2;
+
+}
+
 
 button {
     position: fixed;
     right: 600px;
-    bottom: 50px;
+    bottom: 30px;
     align-self: center;
 }
