@@ -6,12 +6,14 @@ var countDown = function() {
     var $elem = $(this);
     var display = function() {
        $elem.text(ct--);
+       $elem.css('color', 'red');
     }
     var iv = setInterval(function() {
         display();
         if (ct === 0) {
           clearInterval(iv);
           $("#countdown").empty();
+          $("#countdown").css('color','green');
           $("#countdown").append("GO!");
         }
     }, 1000);
@@ -21,7 +23,6 @@ $("#countdown").each(countDown);
 
 //C
 setInterval(moveCar, 20);
-
 var keys = {}
 
 $(document).keydown(function(e) {
