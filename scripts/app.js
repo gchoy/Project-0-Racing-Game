@@ -33,11 +33,13 @@ function moveCar() {
           console.log("Player 1 winner");
           $("#redcar").animate({left: "-=10"}, 10000);
           $("#bluecar").animate({left: "-=10"}, 10000);
-          
+          $('body').append('<p id="p1">Player 1 Wins!<p>');
+
         } else if ($('#bluecar').offset().left >1080 && $('#bluecar').offset().left>$('#redcar').offset().left){
           console.log("Player 2 winner");
           $("#bluecar").animate({left: "-=10"}, 10000);
           $("#redcar").animate({left: "-=10"}, 10000);
+          $('body').append('<p id="p2">Player 2 Wins!<p>');
 
         }
 
@@ -46,6 +48,9 @@ function moveCar() {
     }
 }
 
+$('button').click(function() {
+    location.reload();
+});
 
 
 });
