@@ -1,9 +1,26 @@
 $(document).ready(function() {
 
+//Starts and stops start countdown
+var countDown = function() {
+    var ct = 3;
+    var $elem = $(this);
+    var display = function() {
+       $elem.text(ct--);
+    }
+    var iv = setInterval(function() {
+        display();
+        if (ct === 0) {
+          clearInterval(iv);
+          $("#countdown").empty();
+          $("#countdown").append("GO!");
+        }
+    }, 1000);
+    display();
+};
+$("#countdown").each(countDown);
 
-
+//C
 setInterval(moveCar, 20);
-
 
 var keys = {}
 
@@ -23,7 +40,7 @@ function moveCar() {
    }
 
     for (var direction in keys) {
-      
+
         if (direction == 68) {
             $("#redcar").animate({left: "+=5"}, 0);
          }
