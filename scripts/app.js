@@ -17,10 +17,13 @@ $(document).keyup(function(e) {
 
 function moveCar() {
 
+   function stopCar(){
+     $("#redcar").animate({left: "-=10"}, 10000);
+     $("#bluecar").animate({left: "-=10"}, 10000);
+   }
 
     for (var direction in keys) {
-        var winner = "";
-
+      
         if (direction == 68) {
             $("#redcar").animate({left: "+=5"}, 0);
          }
@@ -31,19 +34,15 @@ function moveCar() {
 
         if ($('#redcar').offset().left >1080 && $('#redcar').offset().left>$('#bluecar').offset().left){
           console.log("Player 1 winner");
-          $("#redcar").animate({left: "-=10"}, 10000);
-          $("#bluecar").animate({left: "-=10"}, 10000);
+          stopCar();
           $('body').append('<p id="p1">Player 1 Wins!<p>');
 
         } else if ($('#bluecar').offset().left >1080 && $('#bluecar').offset().left>$('#redcar').offset().left){
           console.log("Player 2 winner");
-          $("#bluecar").animate({left: "-=10"}, 10000);
-          $("#redcar").animate({left: "-=10"}, 10000);
+          stopCar();
           $('body').append('<p id="p2">Player 2 Wins!<p>');
 
         }
-
-
 
     }
 }
