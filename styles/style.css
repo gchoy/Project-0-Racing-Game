@@ -9,6 +9,9 @@ h1 {
   font-weight: bold;
   color: yellow;
 }
+#left {
+  color: white;
+}
 
 #countdown {
   text-align: center;
